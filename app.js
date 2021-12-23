@@ -1,3 +1,4 @@
+const body = document.body;
 const canvas = document.querySelector("#jsCanvas");
 const ctx = canvas.getContext("2d");
 
@@ -40,8 +41,9 @@ function onMouseEnter(event) {
 }
 
 if (canvas) {
+  canvas.addEventListener("mouseenter", onMouseEnter);
   canvas.addEventListener("mousemove", onMouseMove);
   canvas.addEventListener("mousedown", startPainting);
   canvas.addEventListener("mouseup", stopPainting);
-  canvas.addEventListener("mouseenter", onMouseEnter);
+  body.addEventListener("mouseup", stopPainting);
 }

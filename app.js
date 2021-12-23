@@ -10,6 +10,9 @@ const INITIAL_COLOR = "#2c2c2c";
 canvas.width = canvas.offsetWidth;
 canvas.height = canvas.offsetHeight;
 
+ctx.fillStyle = "white";
+ctx.fillRect(0, 0, canvas.width, canvas.height);
+
 ctx.strokeStyle = INITIAL_COLOR;
 ctx.fillStyle = INITIAL_COLOR;
 ctx.lineWidth = 2.5;
